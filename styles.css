@@ -9,6 +9,10 @@ body{
     gap: 20px;             
     background-color: rgb(0, 116, 194);
 }
+#Heading img {
+    padding-left: 10px;
+    height: 60px;          
+}
 #Heading a img {
     padding-left: 10px;
     height: 60px;          
@@ -90,4 +94,5 @@ body{
     max-height: 320px;
     object-fit: contain;
     border: 2px solid black;
+
 }
