@@ -1,0 +1,70 @@
+.starry {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at bottom, #020111 0%, #000000 70%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.starry::before,
+.starry::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 10s infinite linear;
+    pointer-events: none;
+}
+
+.starry::before {
+    background-image:
+        radial-gradient(1px 1px at 20px 30px, white, transparent),
+        radial-gradient(1px 1px at 80px 120px, white, transparent),
+        radial-gradient(1px 1px at 150px 60px, white, transparent),
+        radial-gradient(1px 1px at 190px 170px, white, transparent);
+    opacity: 0.8;
+}
+
+.starry::after {
+    background-image:
+        radial-gradient(2px 2px at 50px 50px, #ccc, transparent),
+        radial-gradient(2px 2px at 120px 90px, #ddd, transparent),
+        radial-gradient(2px 2px at 170px 150px, #bbb, transparent);
+    animation-duration: 15s;
+}
+@keyframes twinkle {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-200px);
+    }
+}
+
+#Arcscroll{
+    padding: 20px;
+    margin-top: 10px;
+    border:2px solid #ccc;
+    margin-bottom: 30px;
+    border-radius: 15px;
+	display: flex;            
+    gap: 24px;  
+}
+#Arcscroll div{
+    width: 260px;
+    padding: 12px;  
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#Arcscroll div:hover{
+    transform: scale(1.10);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+#Arcscroll div img {
+    width: 100%;
+    display: block;
+}
