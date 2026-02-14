@@ -3,11 +3,17 @@ body{
     color: antiquewhite;
 }
 #Heading {
+    border: 2px solid black;
     border-radius: 20px;
     display: flex;
     align-items: center;  
     gap: 20px;             
     background-color: rgb(0, 116, 194);
+}
+#Heading.goldenFiction{
+    -webkit-text-stroke: 0.85px black;
+    background-color: rgb(219, 150, 0);
+    
 }
 #Heading img {
     padding-left: 10px;
