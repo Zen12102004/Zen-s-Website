@@ -15,6 +15,9 @@ body{
     background-color: rgb(219, 150, 0);
     
 }
+p{
+    color: black;
+}
 #Heading img {
     padding-left: 10px;
     height: 60px;          
