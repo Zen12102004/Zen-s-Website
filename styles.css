@@ -105,3 +105,8 @@ p{
     border: 2px solid black;
 
 }
+.separatorLine{
+    border: none;
+    border-top:5px double black ;
+    width: 100%;
+}
