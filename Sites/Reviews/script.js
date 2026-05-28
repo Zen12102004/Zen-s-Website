@@ -1,23 +1,33 @@
 function showChapter(chapterNumber) {
-    const content = document.getElementById(`chapter${chapterNumber}-content`);
+    const displayContainer = document.getElementById('review-display');
+    if (!displayContainer) return;
 
-    if (!content) return;
-
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-    } else {
-        content.style.display = "none";
-    }
+    fetch(`./content/Arknight/arknights-ch${chapterNumber}.md`)
+        .then(response => {
+            if (!response.ok) throw new Error("Chapter content file not found.");
+            return response.text();
+        })
+        .then(markdownText => {
+            displayContainer.innerHTML = marked.parse(markdownText);
+        })
+        .catch(error => {
+            displayContainer.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+        });
 }
 
-function showMovie(movieNumber){
-    const content = document.getElementById(`movie${movieNumber}-content`);
+function showMovie(movieNumber) {
+    const displayContainer = document.getElementById('review-display');
+    if (!displayContainer) return;
 
-    if (!content) return;
-
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-    } else {
-        content.style.display = "none";
-    }
+    fetch(`./content/starwars-movie${movieNumber}.md`)
+        .then(response => {
+            if (!response.ok) throw new Error("Movie content file not found.");
+            return response.text();
+        })
+        .then(markdownText => {
+            displayContainer.innerHTML = marked.parse(markdownText);
+        })
+        .catch(error => {
+            displayContainer.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+        });
 }

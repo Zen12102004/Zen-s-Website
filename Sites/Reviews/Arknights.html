@@ -6,36 +6,27 @@
     <title>Arknights</title>
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="AK.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="script.js"></script>
-    
 </head>
 <body>
+
     <div id="Heading">
         <a href="../../index.html"><img src="../../logo.jpg"></a>
         <h1>ARKNIGHTS</h1>
     </div>
+
     <div id="chapterscroll">
-        <div id="chapter5-card" onclick="showChapter(5)">
-            <img src="Assets/Ch5.webp" alt="ch5" style="size: 50px;">
+        <div id="chapter5-card" onclick="loadChapter('arknights-ch5')">
+            <img src="Assets/Ch5.webp" alt="ch5" style="width: 50px;">
         </div>
-		<div id="chapter6-card" onclick="showChapter(6)">
-            <img src="Assets/Ch5.webp" alt="ch5" style="size: 50px;">
+        <div id="chapter6-card" onclick="loadChapter('arknights-ch6')">
+            <img src="Assets/Ch5.webp" alt="ch6" style="width: 50px;">
         </div>
     </div>
 
-    <div id="chapter5-content" hidden style="display: none; color: black;" >
-        <h3>Chapter 5: Necessary Solutions</h3>
-        <img src="Assets/akch5.png" width="50%">
-        <p>
-            This Chapter was a mixed bag for me...
-            <br><br>
-            <img src="Assets/AKCh5.1.jpg" width="25%"><br>
-            This part was amazing...
-            <br><br>
-            Best part of this chapter was obviously Ch'en <br>
-            <img src="Assets/AKCh5.2.jpg" width="25%">
-            <img src="Assets/AKCh5.3.jpg" width="25%"><br>
-        </p>
+    <div id="review-display" style="color: black; margin-top: 20px;">
+        <p>Select a chapter above to read the review.</p>
     </div>
 
 </body>
