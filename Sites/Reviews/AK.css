@@ -7,14 +7,18 @@ body{
     margin-bottom: 30px;
     border-radius: 15px;
     background-image: linear-gradient( rgb(47, 61, 63), rgb(0, 137, 158));
-	display: flex;            
+    display: flex;            
     gap: 24px;  
+    overflow-x: auto;
 }
 #chapterscroll div{
     width: 260px;
     padding: 12px;  
+    border: 1px solid black;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0;
+    background-color: rgba(240, 248, 255, 0.5);
 }
 
 #chapterscroll div:hover {
@@ -23,8 +27,26 @@ body{
 }
 
 #chapterscroll div img {
-    width: 100%;
+    width: 50%;
     display: block;
+    border-radius: 8px;
+}
+
+#chapterscroll div p {
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#review-display, 
+#review-display h1, 
+#review-display h2, 
+#review-display h3, 
+#review-display p, 
+#review-display li {
+    color: black;
 }
 
 #chapter5-content{
@@ -33,4 +55,3 @@ body{
     border: 1px solid black;
     background-image: linear-gradient(rgb(171, 182, 181),rgb(84, 175, 250));
 }
-

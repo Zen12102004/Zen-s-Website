@@ -26,7 +26,7 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            fetch('./Content/SciAdv/Noah.md')
+            fetch('Content/SciAdv/Noah.md')
                 .then(response => {
                     if (!response.ok) throw new Error("Review content not found.");
                     return response.text();

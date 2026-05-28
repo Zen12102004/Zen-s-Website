@@ -10,24 +10,22 @@
     <script src="script.js"></script>
 </head>
 <body>
-
     <div id="Heading">
         <a href="../../index.html"><img src="../../logo.jpg"></a>
         <h1>ARKNIGHTS</h1>
     </div>
-
+    
     <div id="chapterscroll">
-        <div id="chapter5-card" onclick="loadChapter('arknights-ch5')">
-            <img src="Assets/Ch5.webp" alt="ch5" style="width: 50px;">
+        <div id="chapter5-card" onclick="showChapter(5)">
+            <img src="Assets/Ch5.webp" alt="Chapter 5">
+            <p>Chapter 5: Necessary Solutions</p>
         </div>
-        <div id="chapter6-card" onclick="loadChapter('arknights-ch6')">
-            <img src="Assets/Ch5.webp" alt="ch6" style="width: 50px;">
+        <div id="chapter6-card" onclick="showChapter(6)">
+            <img src="Assets/Ch5.webp" alt="Chapter 6">
+            <p>Chapter 6: Partial Necrosis</p>
         </div>
     </div>
 
-    <div id="review-display" style="color: black; margin-top: 20px;">
-        <p>Select a chapter above to read the review.</p>
-    </div>
-
+    <div id="review-display" style="margin-top: 20px;"></div>
 </body>
 </html>

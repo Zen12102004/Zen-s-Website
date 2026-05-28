@@ -1,21 +1,31 @@
-#QuestionFont{
+/* Ensure all standard Markdown elements render in black over the BlueSky gradient */
+.BlueSky h1, 
+.BlueSky h2, 
+.BlueSky h3, 
+.BlueSky h4, 
+.BlueSky p, 
+.BlueSky li {
     color: black;
-    font-size: x-large;
-    font-weight: bold;
+}
 
-}
-#AnswerFont{
-    color: black;
-}
-dt{
+/* Keep your existing styles intact */
+#QuestionFont {
     color: black;
     font-size: x-large;
     font-weight: bold;
 }
-dd{
+#AnswerFont {
     color: black;
 }
-.BlueSky{
+dt {
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+}
+dd {
+    color: black;
+}
+.BlueSky {
     margin: 0;
     min-height: 100vh;
     background: linear-gradient(to top, #5b9bfa, #78c4e7);
