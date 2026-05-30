@@ -68,3 +68,8 @@
     width: 100%;
     display: block;
 }
+
+#review-display,
+#review-display * {
+    color: whitesmoke;
+}
