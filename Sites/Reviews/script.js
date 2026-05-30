@@ -2,7 +2,7 @@ function showChapter(chapterNumber) {
     const displayContainer = document.getElementById('review-display');
     if (!displayContainer) return;
 
-    fetch(`./content/Arknight/arknights-ch${chapterNumber}.md`)
+    fetch(`./Content/Arknight/arknights-ch${chapterNumber}.md`)
         .then(response => {
             if (!response.ok) throw new Error("Chapter content file not found.");
             return response.text();
@@ -20,7 +20,7 @@ function showMovie(movieNumber) {
     const displayContainer = document.getElementById('review-display');
     if (!displayContainer) return;
 
-    fetch(`./content/StarWars/movie${movieNumber}.md`)
+    fetch(`./Content/StarWars/movie${movieNumber}.md`)
         .then(response => {
             if (!response.ok) throw new Error("Movie content file not found.");
             return response.text();
